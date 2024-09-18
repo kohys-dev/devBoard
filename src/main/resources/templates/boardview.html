@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        a{padding : 10px; border : 1px solid black; background-color : #BDBDBD; text-decoration : none; font-weight : 600;}
+    </style>
+</head>
+<body>
+<div class = "container">
+    <h1 th:text="${board.title}"></h1>
+    <p th:text="${board.content}"></p>
+    <a th:href = "@{/board/delete(id=${board.id})}">삭제</a>
+    <a th:href = "@{/board/modify/{id}(id=${board.id})}">수정</a>
+</div>
+</body>
+</html>
